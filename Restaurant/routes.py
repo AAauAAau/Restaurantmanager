@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect,request
 from Restaurant import app,db
-#from Restaurant.forms import RegistrationForm, LoginForm
+from Restaurant.forms import RestaurantForm
 from Restaurant.model import Restaurant, MenuItem
 
 """ """ 
@@ -30,7 +30,7 @@ def showRestaurants():
   return render_template('restaurants.html', restaurants = restaurants)
 
 #Create a new restaurant
-@app.route('/restaurant/new/', methods=['GET','POST'])
+""" @app.route('/restaurant/new/', methods=['GET','POST'])
 def newRestaurant():
   if request.method == 'POST':
       newRestaurant = Restaurant(name = request.form['name'])
@@ -40,6 +40,19 @@ def newRestaurant():
       return redirect(url_for('showRestaurants'))
   else:
       return render_template('newRestaurant.html')
+
+ """
+@app.route("/restaurant/new/", methods=['GET', 'POST'])
+def newRestaurant():
+    form = RestaurantForm()
+    if form.validate_on_submit():
+            newRestaurant = Restaurant(name=form.name.data)
+            db.session.add(newRestaurant)
+            db.session.commit()
+            flash(flash('New Restaurant %s Successfully Created' % form.name.data), 'success')
+            return redirect(url_for('showRestaurants'))
+    return render_template('newRestaurant.html', title='New Restaurant', form=form)
+
 
 #Edit a restaurant
 @app.route('/restaurant/<int:restaurant_id>/edit/', methods = ['GET', 'POST'])

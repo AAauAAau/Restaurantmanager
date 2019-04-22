@@ -1,11 +1,17 @@
-<div class="row top-menu">
-	<div class="col-md-6">
-		<a href="{{url_for('showRestaurants')}}">
-			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Restaurants
-		</a>
-	</div>
-	<div class="col-md-6 text-right">
-					<p>Login Link will go Here </p>
-		
-	</div>
-</div>
+<nav class="nav">
+	<ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a class="nav-link" href="{{url_for('showRestaurants')}}">
+				<span class="fas fa-home" aria-hidden="true"></span>Show All Restaurants
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">
+				<span class="fas fa-user-plus"></span> Sign Up
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>
+		</li>
+	</ul>
+</nav>

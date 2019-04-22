@@ -1,46 +1,25 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
-	<div class="row top-menu">
-		<div class="col-md-10"></div>
-		<div class="col-md-2 text-right">
-					</div>
-	</div>
-	<div class="row divider blue">
-		<div class="col-md-12"></div>
-	</div>
-	<div class="row banner main">
-		<div class="col-md-1"></div>
-		<div class="col-md-11 padding-none">
-			<h1>Restaurants</h1>
-		</div>
-	</div>
+<img src="{{ url_for('static', filename = 'top-banner.jpg') }}" class="img-fluid" alt="Responsive image">
 
-<div class = 'flash'>
-		      {% with messages = get_flashed_messages() %}
+	{% with messages = get_flashed_messages() %}
       {% if messages %}
-          
+	  <div class = "content alert alert-success">  
         <ul>
         {% for message in messages %}
-            <li> <strong> {{ message }} </strong> </li>
+            <li>{{ message }} </li>
         {% endfor %}
-        </ul>
+		</ul>
+		</div>
         {% endif %}
     {% endwith %}
 
-</div>
-	
-	<div class="row padding-top padding-bottom">
-		<div class="col-md-1"></div>
-		<div class="col-md-10 padding-none">
-			<a href="{{url_for('newRestaurant')}}">
-				<button class="btn btn-default" id="new-restaurant">
-					<span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>Add Restaurant
-				</button>
-			</a>
-		</div>
-		<div class="col-md-1"></div>
-	</div>
+
+<button  onclick="window.location.href='{{url_for('newRestaurant')}}'" class="btn btn-primary" id="new-restaurant">
+	<i class="far fa-plus-square" style=" vertical-align: middle;"></i> <i style=" vertical-align: middle;"> Add Restaurant</i> 
+</button>
+<div class="divider-10"></div>
 	{% for restaurant in restaurants %}
 		<a href = "{{url_for('showMenu', restaurant_id = restaurant.id)}}">
 			<div class="row">
