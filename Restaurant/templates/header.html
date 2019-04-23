@@ -1,10 +1,12 @@
-<nav class="nav">
+<!-- <nav class="nav">
 	<ul class="nav justify-content-center">
 		<li class="nav-item">
 			<a class="nav-link" href="{{url_for('showRestaurants')}}">
 				<span class="fas fa-home" aria-hidden="true"></span>Show All Restaurants
 			</a>
 		</li>
+	</ul>
+	<ul class="nav navbar-nav ml-auto">
 		<li class="nav-item">
 			<a class="nav-link" href="#">
 				<span class="fas fa-user-plus"></span> Sign Up
@@ -14,4 +16,18 @@
 			<a class="nav-link" href="#"><span class="fas fa-sign-in-alt"></span> Login</a>
 		</li>
 	</ul>
-</nav>
+</nav> -->
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+		<a class="navbar-brand" href="#">Restaurantsmanager</a>
+	  </div>
+	  <ul class="nav navbar-nav">
+		<li class="active"><a href="#">Show All Restaurants</a></li>
+	  </ul>
+	  <div class="nav navbar-nav navbar-right">
+		<a href="#"><span class="fas fa-user-plus"></span> Sign Up</a>
+		<a href="#"><span class="fas fa-sign-in-alt"></span> Login</a>
+	  </div>
+	</div>
+  </nav>

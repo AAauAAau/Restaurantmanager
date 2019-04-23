@@ -1,8 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
-<img src="{{ url_for('static', filename = 'top-banner.jpg') }}" class="img-fluid" alt="Responsive image">
-
+<div><img src="{{ url_for('static', filename = 'top-banner.jpg') }}" class="stretch img-fluid" alt="Responsive image"></div>
 	{% with messages = get_flashed_messages() %}
       {% if messages %}
 	  <div class = "content alert alert-success">  
