@@ -1,7 +1,7 @@
 # Restaurant Manager
 **!! Still in progress and not working proper !!**
 
-It is a website to manage restaurants and their menus.Code to test and combine concepts from the udacity Full Stack Web Developer Nanodegree Program.
+It is a fictional website to manage restaurants and their menus. The Code is to test and combine concepts from the udacity Full Stack Web Developer Nanodegree Program.
 
 ### Tech
 
@@ -27,6 +27,6 @@ To run the WebApp
 ```sh
 $ python run.py
 ```
- Thed site is running on http://127.0.0.1:5000/
+The site is running on http://127.0.0.1:5000/
 ### License
 MIT
