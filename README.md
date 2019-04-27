@@ -1,10 +1,32 @@
-To run this final project
+# Restaurant Manager
+**!! Still in progress and not working proper !!**
 
-1. Navigate to the Full-Stack-Foundations/Lesson-4/Final-Project directory inside the vagrant environment
+It is a website to manage restaurants and their menus.Code to test and combine concepts from the udacity Full Stack Web Developer Nanodegree Program.
 
-2. run database_setup.py to create the database
+### Tech
 
-3. run lotsofmenus.py to populate the database
+Restaurant Manager uses follwing open source projects:
 
-4. run app.py and navigate to localhost:5050 in your browser
+* [Flask](http://flask.pocoo.org/) - is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
+* [flask-sqlalchemy](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)- is an extension for Flask that adds support for SQLAlchemy to your application
+* [oauth2client](https://github.com/googleapis/oauth2client)-This is a Python library for accessing resources protected by OAuth 2.0.
 
+### Installation and run
+
+Install the dependencies
+```sh
+$ pip install flask
+$ pip install oauth2client
+$ pip install flask_sqlalchemy
+```
+Run the following python scripts to create and fill the sql database
+```sh
+$ python CreateDbAndContent.py
+```
+To run the WebApp 
+```sh
+$ python run.py
+```
+ Thed site is running on http://127.0.0.1:5000/
+### License
+MIT
